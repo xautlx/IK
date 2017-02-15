@@ -205,6 +205,9 @@ public class Pinyin4jUtil {
                         chinese.charAt(i), defaultFormat);
                 if (pinyinArray != null && pinyinArray.length > 0) {
                     pinyinList.add(pinyinArray);
+                }else{
+                    //不能拼音转换则原样输出
+                    pinyinList.add(new String[]{String.valueOf(chinese.charAt(i))});
                 }
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
@@ -254,6 +257,9 @@ public class Pinyin4jUtil {
                         chinese.charAt(i), defaultFormat);
                 if (pinyinArray != null && pinyinArray.length > 0) {
                     pinyinList.add(pinyinArray);
+                }else{
+                    //不能拼音转换则原样输出
+                    pinyinList.add(new String[]{String.valueOf(chinese.charAt(i))});
                 }
             }
         } catch (BadHanyuPinyinOutputFormatCombination e) {
