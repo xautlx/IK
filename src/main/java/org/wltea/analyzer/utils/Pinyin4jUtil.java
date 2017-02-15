@@ -279,7 +279,7 @@ public class Pinyin4jUtil {
                 }
             }
         }
-        return sorts;
+        return pinyins;
     }
 
     public static Collection<String> getPinyinShortCollection(String chinese, boolean upperCase,
